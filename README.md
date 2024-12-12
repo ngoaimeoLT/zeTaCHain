@@ -23,12 +23,14 @@ source $HOME/.bash_profile
 [ ! -d ~/go/bin ] && mkdir -p ~/go/bin
 ```
 
-# set vars
+*set vars**
+```
 echo "export WALLET="wallet"" >> $HOME/.bash_profile
 echo "export MONIKER="test"" >> $HOME/.bash_profile
 echo "export ZETACHAIN_CHAIN_ID="athens_7001-1"" >> $HOME/.bash_profile
 echo "export ZETACHAIN_PORT="14"" >> $HOME/.bash_profile
 source $HOME/.bash_profile
+```
 
 # download binary
 cd $HOME
