@@ -42,11 +42,13 @@ chmod +x $HOME/zetacored
 mv $HOME/zetacored  $HOME/go/bin
 ```
 
-# config and init app
+**config and init app**
+```
 zetacored config node tcp://localhost:${ZETACHAIN_PORT}657
 zetacored config keyring-backend os
 zetacored config chain-id athens_7001-1
 zetacored init "test" --chain-id athens_7001-1
+```
 
 # download genesis and addrbook
 wget -O $HOME/.zetacored/config/genesis.json https://server-4.itrocket.net/testnet/zetachain/genesis.json
