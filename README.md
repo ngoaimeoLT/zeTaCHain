@@ -50,9 +50,11 @@ zetacored config chain-id athens_7001-1
 zetacored init "test" --chain-id athens_7001-1
 ```
 
-# download genesis and addrbook
+**download genesis and addrbook**
+```
 wget -O $HOME/.zetacored/config/genesis.json https://server-4.itrocket.net/testnet/zetachain/genesis.json
 wget -O $HOME/.zetacored/config/addrbook.json  https://server-4.itrocket.net/testnet/zetachain/addrbook.json
+```
 
 # set seeds and peers
 SEEDS="c1bbbfe2a5b15674bf24a869b3e8189b6b410ae7@zetachain-testnet-seed.itrocket.net:14656"
