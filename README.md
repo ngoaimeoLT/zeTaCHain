@@ -56,11 +56,13 @@ wget -O $HOME/.zetacored/config/genesis.json https://server-4.itrocket.net/testn
 wget -O $HOME/.zetacored/config/addrbook.json  https://server-4.itrocket.net/testnet/zetachain/addrbook.json
 ```
 
-# set seeds and peers
+***set seeds and peers**
+```
 SEEDS="c1bbbfe2a5b15674bf24a869b3e8189b6b410ae7@zetachain-testnet-seed.itrocket.net:14656"
 PEERS="d21b103628b0d5d824bbe81b809d8dc457bd2059@zetachain-testnet-peer.itrocket.net:16656,66338a18a755a0c780b011f012ff142ebaa8fa56@44.236.174.26:26656,e3fea0450f9d23ad7b64d41aab882a82a0b71d6b@150.136.176.81:26656,e3a9810a22a12c04ef1663f8747274e4ef1bdf58@51.159.145.74:26656,c1355344beed2224ff1377dd102e6f847cce2cb6@34.253.137.241:26656,1ef4e7193a9d42a8f3e5195f7a21e925bc50ff55@57.129.28.218:26656,a6090cdf3ff4bdc428ba89c4f622ec1b3490e338@18.143.71.236:26656,2352e5f3bad70d13ebae1876966d6a10c219e819@95.216.244.70:26656,7b1e4c6dbdeb65fbaafd5fe415679d252bdae2f9@141.94.214.137:26656,3dba050e7733ac755386015a0aa7adafe99120c7@135.181.136.250:16656,57693a9bce3ffb5d6023a161ac9f744ac09a2329@162.19.240.28:26656"
 sed -i -e "/^\[p2p\]/,/^\[/{s/^[[:space:]]*seeds *=.*/seeds = \"$SEEDS\"/}" \
        -e "/^\[p2p\]/,/^\[/{s/^[[:space:]]*persistent_peers *=.*/persistent_peers = \"$PEERS\"/}" $HOME/.zetacored/config/config.toml
+```
 
 # set custom ports in app.toml
 sed -i.bak -e "s%:1317%:${ZETACHAIN_PORT}317%g;
