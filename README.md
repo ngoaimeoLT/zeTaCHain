@@ -99,7 +99,8 @@ sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.zetacored/config/conf
 sed -i -e "s/^indexer *=.*/indexer = \"null\"/" $HOME/.zetacored/config/config.toml
 ```
 
-# create service file
+**create service file**
+```
 sudo tee /etc/systemd/system/zetacored.service > /dev/null <<EOF
 [Unit]
 Description=Zetachain node
@@ -114,6 +115,7 @@ LimitNOFILE=65535
 [Install]
 WantedBy=multi-user.target
 EOF
+```
 
 # reset and download snapshot
 zetacored tendermint unsafe-reset-all --home $HOME/.zetacored
