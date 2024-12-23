@@ -127,7 +127,8 @@ if curl -s --head curl https://server-4.itrocket.net/testnet/zetachain/zetachain
 fi
 ```
 
-# enable and start service
+**enable and start service**
+```
 sudo systemctl daemon-reload
 sudo systemctl enable zetacored
 sudo systemctl restart zetacored && sudo journalctl -u zetacored -f
@@ -135,6 +136,8 @@ Automatic Installation
 pruning: custom: 100/0/19 | indexer: null
 
 source <(curl -s https://itrocket.net/api/testnet/zetachain/autoinstall/)
+```
+
 Create wallet
 # to create a new wallet, use the following command. don’t forget to save the mnemonic
 zetacored keys add $WALLET
