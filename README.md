@@ -163,7 +163,8 @@ source $HOME/.bash_profile
 zetacored status 2>&1 | jq 
 ```
 
-# before creating a validator, you need to fund your wallet and check balance
+**before creating a validator, you need to fund your wallet and check balance**
+```
 zetacored query bank balances $WALLET_ADDRESS 
 Node Sync Status Checker
 #!/bin/bash
@@ -184,6 +185,7 @@ while true; do
   fi
 
   echo -e "\033[1;33mNode Height:\033[1;34m $local_height\033[0m \033[1;33m| Network Height:\033[1;36m $network_height\033[0m \033[1;33m| Blocks Left:\033[1;31m $blocks_left\033[0m"
+```
 
   sleep 5
 done
