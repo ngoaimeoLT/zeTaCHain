@@ -189,22 +189,8 @@ while true; do
   echo -e "\033[1;33mNode Height:\033[1;34m $local_height\033[0m \033[1;33m| Network Height:\033[1;36m $network_height\033[0m \033[1;33m| Blocks Left:\033[1;31m $blocks_left\033[0m"
 ```
 
-  sleep 5
-done
-Create validator
-Moniker
-Identity
-Details
-I love blockchain ❤️
-Amount, azeta
-1000000
-Commission rate
-0.1
-Commission max rate
-0.2
-Commission max change rate
-0.01
-Website
+**Create validator**
+```
 zetacored tx staking create-validator \
 --amount 1000000azeta \
 --from $WALLET \
@@ -220,6 +206,8 @@ zetacored tx staking create-validator \
 --chain-id athens_7001-1 \
 --gas auto --gas-adjustment 1.5 --fees 5136570000000000azeta \
 -y
+```
+
 Monitoring
 If you want to have set up a monitoring and alert system use our cosmos nodes monitoring guide with tenderduty
 
