@@ -169,6 +169,7 @@ zetacored query bank balances $WALLET_ADDRESS
 ```
 
 **Node Sync Status Checker**
+```
 #!/bin/bash
 rpc_port=$(grep -m 1 -oP '^laddr = "\K[^"]+' "$HOME/.zetacored/config/config.toml" | cut -d ':' -f 3)
 while true; do
