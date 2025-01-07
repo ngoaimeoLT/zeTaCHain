@@ -236,10 +236,12 @@ sudo ufw allow ${ZETACHAIN_PORT}656/tcp
 sudo ufw enable
 ```
 
-Delete node
+**Delete node**
+```
 sudo systemctl stop zetacored
 sudo systemctl disable zetacored
 sudo rm -rf /etc/systemd/system/zetacored.service
 sudo rm $(which zetacored)
 sudo rm -rf $HOME/.zetacored
 sed -i "/ZETACHAIN_/d" $HOME/.bash_profile
+```
